@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bulb project</title>
+    </head>
+    <style>
+        *{
+            background-color: black;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn{
+            background-color: brown;
+            padding: 30px;
+        }
+    </style>
+    <body>
+        <img id="bulb" class="center" src="bulb off.jpg">
+        <button id="toggleBtn" class="center btn">Turn on</button>
+        <script>
+            let btn = document.getElementById("toggleBtn")
+            let bulb = document.getElementById("bulb")
+            btn.addEventListener('click',toggleBulb)
+            function toggleBulb(e){
+                if(btn.textContent.includes("on")){
+                bulb.src="bulb onn.jpg"
+                btn.textContent="turn off"
+                }else{
+                    bulb.src="bulb off.jpg"
+                btn.textContent="turn on"  
+                }}
+        </script>
+    </body>
+</html>
